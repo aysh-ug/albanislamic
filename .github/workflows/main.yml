@@ -10,42 +10,36 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout source code
-      - name: Checkout repository
+      # Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v4
 
-      # Setup Node.js (IMPORTANT: Angular requires Node 20+)
+      # Setup Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
 
-      # Verify Node version
-      - name: Check Node version
-        run: node -v
-
       # Install dependencies
       - name: Install dependencies
         run: npm ci
 
-      # Build Angular production app
+      # Build Angular app
       - name: Build Angular app
         run: npx ng build albanislamic --configuration production
 
-      # Show build output (debug step)
+      # Show output
       - name: List build output
         run: ls -R dist
 
-      # Deploy via SFTP (SSH)
-      - name: Deploy to cPanel via SFTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      # REAL SFTP DEPLOY (correct tool)
+      - name: Deploy via SFTP (SSH)
+        uses: appleboy/scp-action@v0.1.7
         with:
-          server: ${{ secrets.SFTP_SERVER }}
+          host: ${{ secrets.SFTP_SERVER }}
           username: ${{ secrets.SFTP_USERNAME }}
           password: ${{ secrets.SFTP_PASSWORD }}
           port: 22
-          protocol: sftp
-          local-dir: dist/albanislamic/browser/
-          server-dir: ./public_html/
-          dangerous-clean-slate: true
+          source: "dist/albanislamic/browser/*"
+          target: "/home/web@albanislamic.org/public_html/"
