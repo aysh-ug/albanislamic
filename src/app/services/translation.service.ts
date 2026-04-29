@@ -18,7 +18,7 @@ export class TranslationService {
         language: 'Language',
       },
       home: {
-        heroTitle: 'Welcome to Alban Islamic Primary School',
+        heroTitle: 'Welcome to <br /> <span class="text-white">ALBAN ISLAMIC SCHOOL</span>',
         heroSubtitle:
           'Providing education and humanitarian assistance to children and communities in need.',
         missionTitle: 'Our Mission',
@@ -52,6 +52,11 @@ export class TranslationService {
             description: 'Support during the holy month of Ramadhan (Food basket/Ifutar program).',
           },
           { title: 'Al-adhuhiya', description: 'Al-adhuhiya program for the community.' },
+          {
+            title: 'Agriculture Inputs',
+            description:
+              'Provide agriculture inputs to farmers like maize, beans, cocoa seedlings.',
+          },
         ],
         impactTitle: 'Our Impact',
         impactText:
@@ -89,7 +94,7 @@ export class TranslationService {
         language: 'اللغة',
       },
       home: {
-        heroTitle: 'مرحباً بكم في مدرسة ألبان الإسلامية الابتدائية',
+        heroTitle: 'مرحباً بكم في <br /> <span class="text-white">مدرسة ألبان الإسلامية</span>',
         heroSubtitle: 'توفير التعليم والمساعدة الإنسانية للأطفال والمجتمعات المحتاجة.',
         missionTitle: 'مهمتنا',
         missionText: 'تقديم المساعدة الإنسانية وتعزيز تنمية المجتمع وفقاً للمبادئ الإسلامية.',

@@ -13,7 +13,7 @@ import { TranslationService } from '../../services/translation.service';
         <div class="flex justify-between h-20 items-center">
           <div class="flex-shrink-0 flex items-center">
             <a routerLink="/" class="flex items-center gap-2">
-              <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-bold text-xl">A</div>
+              <img src="logo.png" alt="Alban Islamic Logo" class="h-10 w-auto object-contain" />
               <span class="text-2xl font-bold text-primary">Alban Islamic</span>
             </a>
           </div>

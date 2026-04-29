@@ -12,7 +12,7 @@ import { TranslationService } from '../../services/translation.service';
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
             <div class="flex items-center gap-2 mb-4">
-              <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-bold text-xl">A</div>
+              <img src="logo.png" alt="Alban Islamic Logo" class="h-10 w-auto object-contain" />
               <span class="text-2xl font-bold">Alban Islamic</span>
             </div>
             <p class="text-gray-400 mt-4 max-w-md">

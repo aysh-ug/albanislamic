@@ -13,7 +13,7 @@ import { TranslationService } from '../../services/translation.service';
       <div class="absolute inset-0 bg-primary/90"></div>
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-40 relative z-10">
         <div class="max-w-3xl">
-          <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 text-white">{{ ts.t.home.heroTitle }}</h1>
+          <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 text-white" [innerHTML]="ts.t.home.heroTitle"></h1>
           <p class="text-xl md:text-2xl font-medium mb-10 text-white opacity-90">{{ ts.t.home.heroSubtitle }}</p>
           <a routerLink="/about-us" class="inline-block bg-white text-primary font-bold px-8 py-4 rounded-full shadow-lg hover:bg-gray-100 transition-colors text-lg">
             {{ ts.t.nav.aboutUs }}
