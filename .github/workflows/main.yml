@@ -1,4 +1,4 @@
-name: Deploy Angular to cPanel (FTP)
+name: Deploy Angular to cPanel
 
 on:
   push:
@@ -10,30 +10,25 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout repo
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # Setup Node (Angular requires 20+)
-      - name: Setup Node.js
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
 
-      # Install dependencies
       - name: Install dependencies
         run: npm ci
 
-      # Build Angular app
       - name: Build Angular app
         run: npx ng build albanislamic --configuration production
 
-      # Show output (debug)
-      - name: List build output
+      - name: Show dist output
         run: ls -R dist
 
-      # Deploy via FTP (cPanel compatible)
+      # SIMPLE FTP (most compatible with all cPanel setups)
       - name: Deploy to cPanel via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
@@ -41,7 +36,7 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           port: 21
-          protocol: ftps-legacy
+          protocol: ftp
           local-dir: dist/albanislamic/browser/
-          server-dir: ./public_html/
+          server-dir: public_html/
           dangerous-clean-slate: true
