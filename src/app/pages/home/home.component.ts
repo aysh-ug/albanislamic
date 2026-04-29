@@ -9,9 +9,9 @@ import { TranslationService } from '../../services/translation.service';
   imports: [CommonModule, RouterModule],
   template: `
     <!-- Hero Section -->
-    <div class="relative bg-primary text-white overflow-hidden">
-      <div class="absolute inset-0 bg-black opacity-10"></div>
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 relative z-10">
+    <div class="relative bg-primary text-white overflow-hidden bg-[url('https://placehold.co/1920x1080/028cd4/white?text=School+Background+Photo')] bg-cover bg-center">
+      <div class="absolute inset-0 bg-primary/90"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-40 relative z-10">
         <div class="max-w-3xl">
           <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 text-white">{{ ts.t.home.heroTitle }}</h1>
           <p class="text-xl md:text-2xl font-medium mb-10 text-white opacity-90">{{ ts.t.home.heroSubtitle }}</p>
@@ -21,7 +21,7 @@ import { TranslationService } from '../../services/translation.service';
         </div>
       </div>
       <!-- Decorative element -->
-      <div class="absolute bottom-0 w-full h-16 bg-white" style="clip-path: polygon(0 100%, 100% 100%, 100% 0);"></div>
+      <div class="absolute bottom-0 w-full h-16 bg-white z-10" style="clip-path: polygon(0 100%, 100% 100%, 100% 0);"></div>
     </div>
 
     <!-- Mission & Vision -->
@@ -95,16 +95,91 @@ import { TranslationService } from '../../services/translation.service';
         </div>
         
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          <div *ngFor="let i of [1,2,3,4,5,6,7,8]" class="aspect-square bg-gray-100 rounded-lg flex items-center justify-center hover:bg-gray-200 transition-colors cursor-pointer border border-gray-200">
-             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-gray-400">
-                <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
-              </svg>
+          <div *ngFor="let img of galleryImages; let i = index" 
+               (click)="openLightbox(i)"
+               class="aspect-square bg-gray-100 rounded-lg flex items-center justify-center hover:bg-gray-200 transition-colors cursor-pointer border border-gray-200 overflow-hidden relative group">
+             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors z-10 flex items-center justify-center">
+               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity drop-shadow-md">
+                 <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" />
+               </svg>
+             </div>
+             <!-- Placeholder for gallery image -->
+             <img [src]="'https://placehold.co/600x600/f3f4f6/a1a1aa?text=Photo+' + img" alt="Gallery photo" class="w-full h-full object-cover">
           </div>
         </div>
       </div>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div *ngIf="isLightboxOpen" class="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center backdrop-blur-sm" (click)="closeLightbox()">
+      
+      <!-- Close Button -->
+      <button (click)="closeLightbox()" class="absolute top-6 right-6 text-white hover:text-gray-300 p-2 z-50">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-8 h-8">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
+      <!-- Previous Button -->
+      <button (click)="prevImage($event)" class="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 text-white hover:text-primary bg-black/50 hover:bg-black/80 rounded-full p-3 transition-all z-50">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-8 h-8 rtl:rotate-180">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+        </svg>
+      </button>
+
+      <!-- Main Image -->
+      <div class="relative max-w-5xl max-h-[80vh] w-full px-4" (click)="$event.stopPropagation()">
+         <img [src]="'https://placehold.co/1200x800/f3f4f6/a1a1aa?text=Photo+' + galleryImages[selectedImageIndex]" 
+              alt="Expanded gallery photo" 
+              class="w-full h-full object-contain mx-auto rounded-md shadow-2xl">
+         <div class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/70 text-white px-4 py-1 rounded-full text-sm">
+           {{ selectedImageIndex + 1 }} / {{ galleryImages.length }}
+         </div>
+      </div>
+
+      <!-- Next Button -->
+      <button (click)="nextImage($event)" class="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 text-white hover:text-primary bg-black/50 hover:bg-black/80 rounded-full p-3 transition-all z-50">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-8 h-8 rtl:rotate-180">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+        </svg>
+      </button>
+
     </div>
   `
 })
 export class HomeComponent {
   ts = inject(TranslationService);
+  
+  galleryImages = [1, 2, 3, 4, 5, 6, 7, 8];
+  isLightboxOpen = false;
+  selectedImageIndex = 0;
+
+  openLightbox(index: number) {
+    this.selectedImageIndex = index;
+    this.isLightboxOpen = true;
+    document.body.style.overflow = 'hidden'; // Prevent scrolling when open
+  }
+
+  closeLightbox() {
+    this.isLightboxOpen = false;
+    document.body.style.overflow = 'auto';
+  }
+
+  prevImage(event: Event) {
+    event.stopPropagation();
+    if (this.selectedImageIndex > 0) {
+      this.selectedImageIndex--;
+    } else {
+      this.selectedImageIndex = this.galleryImages.length - 1; // Wrap around
+    }
+  }
+
+  nextImage(event: Event) {
+    event.stopPropagation();
+    if (this.selectedImageIndex < this.galleryImages.length - 1) {
+      this.selectedImageIndex++;
+    } else {
+      this.selectedImageIndex = 0; // Wrap around
+    }
+  }
 }

@@ -30,10 +30,12 @@ export class TranslationService {
           { title: 'Mosques & Faith', description: 'Build mosques and strengthen Islamic faith.' },
           { title: 'Homes for Vulnerable', description: 'Construct homes for single mothers and widows.' },
           { title: 'Zakat Distribution', description: 'Distribute zakat to the poor and needy.' },
-          { title: 'Safe Water', description: 'Provide safe water for communities.' },
-          { title: 'Qurban', description: 'Perform Qurban to help those in need.' },
-          { title: 'Ramadhan Fasting', description: 'Support during the holy month of Ramadhan.' },
-          { title: 'Al-adhuhiya', description: 'Al-adhuhiya program for the community.' }
+          { title: 'Safe Water', description: 'Provide safe water for communities, including borehole construction.' },
+          { title: 'Qurban', description: 'Perform Qurban on Eid Adhuhiya days to help those in need.' },
+          { title: 'Ramadhan Fasting', description: 'Support during the holy month of Ramadhan (Food basket/Ifutar program).' },
+          { title: 'Al-adhuhiya', description: 'Al-adhuhiya program for the community.' },
+          { title: 'Agriculture Inputs', description: 'Provide agriculture inputs to farmers like maize, beans, cocoa seedlings.' },
+          { title: 'Go Back to School', description: 'Provide scholastic packages and school requirements for students.' }
         ],
         impactTitle: 'Our Impact',
         impactText: 'Through our various programs, we strive to make a lasting difference in the Mayuge District, Uganda.',
@@ -41,7 +43,7 @@ export class TranslationService {
       },
       about: {
         title: 'About Us',
-        description: 'Alban Islamic Primary School Limited is a legally nonprofit organization with Reg No. 80020000246307, dedicated to providing educational opportunities to children in need. We believe that education is a fundamental right and strive to ensure that every child has access to quality learning. Our organization is also involved in providing relief and development services in vulnerable communities in Mayuge District, Uganda.',
+        description: 'Alban Islamic Primary School Limited is a nonprofit organization established and fully registered on 15th May, 2017 by the registrar of companies (Reg No: 80020000246307), and fully registered with the Ministry of Education and Sports. The objective of this organization is to improve on the social economic and education areas in the communities, catering for orphans and needy children. Our organization is also involved in providing relief and development services in ST. Mulumba Zone, Kyebando Parish, Mayuge Town Council, Mayuge District, Eastern Uganda.',
         managementTitle: 'Management Team',
         staff: [
           { name: 'Mutagobwa Birali iddi', role: 'Executive Director' },
@@ -52,10 +54,10 @@ export class TranslationService {
       },
       footer: {
         contactUs: 'Contact Information',
-        email: 'admin@albanislamic.org',
-        phone: '+256 [Placeholder]',
-        address: 'St Matia Mulumba Village, Mayuge Town, Mayuge District, Uganda',
-        copyright: '© 2026 Alban Islamic . All rights reserved.'
+        email: 'albanislamic@gmail.com',
+        phone: '+256759860473 / +256782553697',
+        address: 'P.O BOX 1376, ST. Mulumba Zone, Kyebando Parish, Mayuge Town Council, Mayuge District, Uganda',
+        copyright: '© 2026 Alban Islamic Primary School. All rights reserved.'
       }
     },
     ar: {
@@ -77,10 +79,12 @@ export class TranslationService {
           { title: 'المساجد والإيمان', description: 'بناء المساجد وتعزيز العقيدة الإسلامية.' },
           { title: 'منازل للضعفاء', description: 'بناء منازل للأمهات العازبات والأرامل.' },
           { title: 'توزيع الزكاة', description: 'توزيع الزكاة على الفقراء والمحتاجين.' },
-          { title: 'المياه الآمنة', description: 'توفير المياه الآمنة للمجتمعات.' },
-          { title: 'القربان', description: 'أداء القربان لمساعدة المحتاجين.' },
-          { title: 'صيام رمضان', description: 'الدعم خلال شهر رمضان المبارك.' },
-          { title: 'الأضحية', description: 'برنامج الأضحية للمجتمع.' }
+          { title: 'المياه الآمنة', description: 'توفير المياه الآمنة للمجتمعات، بما في ذلك بناء الآبار.' },
+          { title: 'القربان', description: 'أداء القربان في أيام عيد الأضحى لمساعدة المحتاجين.' },
+          { title: 'صيام رمضان', description: 'الدعم خلال شهر رمضان المبارك (سلة غذائية / إفطار).' },
+          { title: 'الأضحية', description: 'برنامج الأضحية للمجتمع.' },
+          { title: 'المدخلات الزراعية', description: 'توفير المدخلات الزراعية للمزارعين مثل الذرة والفاصوليا وشتلات الكاكاو.' },
+          { title: 'العودة إلى المدرسة', description: 'توفير الحقائب المدرسية والمستلزمات الدراسية للطلاب.' }
         ],
         impactTitle: 'تأثيرنا',
         impactText: 'من خلال برامجنا المختلفة، نسعى جاهدين لإحداث فرق دائم في مقاطعة مايوجي، أوغندا.',
@@ -88,7 +92,7 @@ export class TranslationService {
       },
       about: {
         title: 'من نحن',
-        description: 'مدرسة ألبان الإسلامية الابتدائية المحدودة هي منظمة غير ربحية قانونياً برقم تسجيل 80020000246307، مكرسة لتوفير فرص تعليمية للأطفال المحتاجين. نحن نؤمن بأن التعليم حق أساسي ونسعى لضمان حصول كل طفل على تعليم جيد. وتشارك منظمتنا أيضاً في تقديم خدمات الإغاثة والتنمية في المجتمعات الضعيفة في مقاطعة مايوجي، أوغندا.',
+        description: 'مدرسة ألبان الإسلامية الابتدائية المحدودة هي منظمة غير ربحية تأسست ومسجلة بالكامل في 15 مايو 2017 من قبل مسجل الشركات (رقم التسجيل: 80020000246307)، ومسجلة بالكامل لدى وزارة التعليم والرياضة. الهدف من هذه المنظمة هو تحسين المجالات الاجتماعية والاقتصادية والتعليمية في المجتمعات، وتلبية احتياجات الأيتام والأطفال المحتاجين. تشارك منظمتنا أيضاً في تقديم خدمات الإغاثة والتنمية في منطقة سانت مولومبا، أبرشية كيباندو، مجلس مدينة مايوجي، مقاطعة مايوجي، شرق أوغندا.',
         managementTitle: 'فريق الإدارة',
         staff: [
           { name: 'Mutagobwa Birali iddi', role: 'المدير التنفيذي' },
@@ -99,10 +103,10 @@ export class TranslationService {
       },
       footer: {
         contactUs: 'معلومات الاتصال',
-        email: 'admin@albanislamic.org',
-        phone: '+256 [Placeholder]',
-        address: 'قرية سانت ماتيا مولومبا، بلدة مايوجي، مقاطعة مايوجي، أوغندا',
-        copyright: '© 2026 Alban Islamic. جميع الحقوق محفوظة.'
+        email: 'albanislamic@gmail.com',
+        phone: '+256759860473 / +256782553697',
+        address: 'صندوق بريد 1376، منطقة سانت مولومبا، أبرشية كيباندو، مجلس مدينة مايوجي، مقاطعة مايوجي، أوغندا',
+        copyright: '© 2026 مدرسة ألبان الإسلامية الابتدائية. جميع الحقوق محفوظة.'
       }
     }
   };
