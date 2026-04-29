@@ -1,3 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import 'tailwindcss';
+
+@theme {
+  --color-light-blue: #60a5fa;
+  --color-brand-blue: #3b82f6;
+}
+
+body {
+  background-color: #f0f9ff;
+  min-height: 100vh;
+}
