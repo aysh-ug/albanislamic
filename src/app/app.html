@@ -1,4 +1,9 @@
-<h1 class="text-4xl font-bold text-center text-white bg-brand-blue p-8 rounded-lg shadow-lg">
-  Welcome to <br />
-  <span class="text-white">ALBAN ISLAMIC SCHOOL</span>
-</h1>
+<div class="flex flex-col min-h-screen bg-white text-black font-sans">
+  <app-navbar></app-navbar>
+  
+  <main class="flex-grow">
+    <router-outlet></router-outlet>
+  </main>
+  
+  <app-footer></app-footer>
+</div>
