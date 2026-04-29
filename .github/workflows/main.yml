@@ -1,4 +1,4 @@
-name: Deploy Angular to cPanel
+name: Deploy Angular to cPanel (SFTP)
 
 on:
   push:
@@ -10,35 +10,42 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      # Checkout source code
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node
+      # Setup Node.js (IMPORTANT: Angular requires Node 20+)
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
 
-      - name: Verify Node version
+      # Verify Node version
+      - name: Check Node version
         run: node -v
 
+      # Install dependencies
       - name: Install dependencies
         run: npm ci
 
+      # Build Angular production app
       - name: Build Angular app
         run: npx ng build albanislamic --configuration production
 
-      - name: Show dist output
+      # Show build output (debug step)
+      - name: List build output
         run: ls -R dist
 
-      - name: Deploy to cPanel via FTP
+      # Deploy via SFTP (SSH)
+      - name: Deploy to cPanel via SFTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          port: 21
-          protocol: ftps
+          server: ${{ secrets.SFTP_SERVER }}
+          username: ${{ secrets.SFTP_USERNAME }}
+          password: ${{ secrets.SFTP_PASSWORD }}
+          port: 22
+          protocol: sftp
           local-dir: dist/albanislamic/browser/
-          server-dir: ./
+          server-dir: ./public_html/
           dangerous-clean-slate: true
