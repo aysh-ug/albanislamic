@@ -113,7 +113,7 @@ import { TranslationService } from '../../services/translation.service';
             <div *ngIf="activeAccount === 1" class="space-y-4 text-left rtl:text-right">
               <div class="bg-gray-50 p-4 rounded-xl border border-gray-100 flex flex-col gap-1">
                 <span class="text-xs text-gray-500 font-semibold uppercase tracking-wider">Account Name</span>
-                <span class="text-gray-900 font-bold text-lg leading-tight">Alban Islamic primary school Limited</span>
+                <span class="text-gray-900 font-bold text-lg leading-tight">Alban Islamic primary school</span>
               </div>
               
               <div class="bg-gray-50 p-4 rounded-xl border border-gray-100 flex flex-col gap-1">
