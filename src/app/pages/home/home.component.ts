@@ -9,8 +9,8 @@ import { TranslationService } from '../../services/translation.service';
   imports: [CommonModule, RouterModule],
   template: `
     <!-- Hero Section -->
-    <div class="relative bg-primary text-white overflow-hidden bg-[url('https://placehold.co/1920x1080/028cd4/white?text=School+Background+Photo')] bg-cover bg-center">
-      <div class="absolute inset-0 bg-primary/90"></div>
+    <div class="relative bg-primary text-white overflow-hidden bg-[url('/1.jpg')] bg-cover bg-center">
+      <div class="absolute inset-0 bg-gradient-to-r rtl:bg-gradient-to-l from-primary/80 to-transparent"></div>
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-40 relative z-10">
         <div class="max-w-3xl">
           <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 text-white" [innerHTML]="ts.t.home.heroTitle"></h1>
