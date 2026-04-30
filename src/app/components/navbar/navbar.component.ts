@@ -98,10 +98,10 @@ import { TranslationService } from '../../services/translation.service';
             <p class="text-white/90 mt-2">{{ ts.t.nav.donateSubtitle }}</p>
           </div>
           
-          <div class="p-6 md:p-8">
-            <h4 class="text-lg font-bold text-gray-800 mb-4 border-b pb-2">Bank Transfer Details</h4>
+          <div class="p-5 md:p-6">
+            <h4 class="text-lg font-bold text-gray-800 mb-3 border-b pb-2">Bank Transfer Details</h4>
             
-            <div class="flex gap-2 mb-6">
+            <div class="flex gap-2 mb-4">
               <button (click)="activeAccount = 1" [class]="activeAccount === 1 ? 'bg-primary text-white shadow-sm' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'" class="flex-1 py-2 rounded-lg font-bold text-sm transition-all">
                 DFCU-UGX
               </button>
@@ -110,18 +110,18 @@ import { TranslationService } from '../../services/translation.service';
               </button>
             </div>
             
-            <div *ngIf="activeAccount === 1" class="space-y-4 text-left rtl:text-right">
-              <div class="bg-gray-50 p-4 rounded-xl border border-gray-100 flex flex-col gap-1">
+            <div *ngIf="activeAccount === 1" class="space-y-3 text-left rtl:text-right">
+              <div class="bg-gray-50 p-3 rounded-xl border border-gray-100 flex flex-col gap-1">
                 <span class="text-xs text-gray-500 font-semibold uppercase tracking-wider">Account Name</span>
                 <span class="text-gray-900 font-bold text-lg leading-tight">Alban Islamic primary school</span>
               </div>
               
-              <div class="bg-gray-50 p-4 rounded-xl border border-gray-100 flex flex-col gap-1">
+              <div class="bg-gray-50 p-3 rounded-xl border border-gray-100 flex flex-col gap-1">
                 <span class="text-xs text-gray-500 font-semibold uppercase tracking-wider">Bank Name</span>
                 <span class="text-gray-900 font-bold leading-tight">Development finance company in Uganda (Dfcu)</span>
               </div>
               
-              <div class="bg-blue-50 p-5 rounded-xl border border-blue-200 flex flex-col gap-1 relative overflow-hidden">
+              <div class="bg-blue-50 p-4 rounded-xl border border-blue-200 flex flex-col gap-1 relative overflow-hidden">
                 <div class="absolute top-0 right-0 rtl:right-auto rtl:left-0 w-24 h-24 bg-primary/5 rounded-bl-full rtl:rounded-bl-none rtl:rounded-br-full -mr-4 rtl:-mr-0 rtl:-ml-4 -mt-4"></div>
                 <span class="text-xs text-primary font-bold uppercase tracking-wider mb-1">Account Number</span>
                 <div class="flex items-center gap-3">
@@ -135,18 +135,18 @@ import { TranslationService } from '../../services/translation.service';
               </div>
             </div>
             
-            <div *ngIf="activeAccount === 2" class="space-y-4 text-left rtl:text-right">
-              <div class="bg-gray-50 p-4 rounded-xl border border-gray-100 flex flex-col gap-1">
+            <div *ngIf="activeAccount === 2" class="space-y-3 text-left rtl:text-right">
+              <div class="bg-gray-50 p-3 rounded-xl border border-gray-100 flex flex-col gap-1">
                 <span class="text-xs text-gray-500 font-semibold uppercase tracking-wider">Account Name</span>
                 <span class="text-gray-900 font-bold text-lg leading-tight">Alban Islamic primary school Limited</span>
               </div>
               
-              <div class="bg-gray-50 p-4 rounded-xl border border-gray-100 flex flex-col gap-1">
+              <div class="bg-gray-50 p-3 rounded-xl border border-gray-100 flex flex-col gap-1">
                 <span class="text-xs text-gray-500 font-semibold uppercase tracking-wider">Bank Name</span>
                 <span class="text-gray-900 font-bold leading-tight">Development finance company in Uganda (DFCU)</span>
               </div>
               
-              <div class="bg-blue-50 p-5 rounded-xl border border-blue-200 flex flex-col gap-1 relative overflow-hidden">
+              <div class="bg-blue-50 p-4 rounded-xl border border-blue-200 flex flex-col gap-1 relative overflow-hidden">
                 <div class="absolute top-0 right-0 rtl:right-auto rtl:left-0 w-24 h-24 bg-primary/5 rounded-bl-full rtl:rounded-bl-none rtl:rounded-br-full -mr-4 rtl:-mr-0 rtl:-ml-4 -mt-4"></div>
                 <span class="text-xs text-primary font-bold uppercase tracking-wider mb-1">Account Number</span>
                 <div class="flex items-center gap-3">
@@ -159,19 +159,19 @@ import { TranslationService } from '../../services/translation.service';
                 </div>
               </div>
               
-              <div class="grid grid-cols-2 gap-4">
-                <div class="bg-gray-50 p-4 rounded-xl border border-gray-100 flex flex-col gap-1">
+              <div class="grid grid-cols-2 gap-3">
+                <div class="bg-gray-50 p-3 rounded-xl border border-gray-100 flex flex-col gap-1">
                   <span class="text-xs text-gray-500 font-semibold uppercase tracking-wider">Swift Code</span>
                   <span class="text-gray-900 font-bold font-mono">DFCUUGKA</span>
                 </div>
-                <div class="bg-gray-50 p-4 rounded-xl border border-gray-100 flex flex-col gap-1">
+                <div class="bg-gray-50 p-3 rounded-xl border border-gray-100 flex flex-col gap-1">
                   <span class="text-xs text-gray-500 font-semibold uppercase tracking-wider">Branch</span>
                   <span class="text-gray-900 font-bold">Iganga</span>
                 </div>
               </div>
             </div>
             
-            <div class="mt-8 text-center text-sm text-gray-500 font-medium italic">
+            <div class="mt-4 text-center text-sm text-gray-500 font-medium italic">
               "Jazakallah Khair for your generous support"
             </div>
           </div>

@@ -76,11 +76,7 @@ export class TranslationService {
             description: 'Support during the holy month of Ramadhan (Food basket/Ifutar program).',
             image: 'gallery/6.jpg',
           },
-          {
-            title: 'Al-adhuhiya',
-            description: 'Al-adhuhiya program for the community.',
-            image: 'gallery/16.jpg',
-          },
+
           {
             title: 'Agriculture Inputs',
             description:
@@ -155,7 +151,7 @@ export class TranslationService {
           {
             title: 'المساجد والإيمان',
             description: 'بناء المساجد وتعزيز العقيدة الإسلامية.',
-            image: 'gallery/14.jpg',
+            image: 'gallery/4.jpg',
           },
           {
             title: 'منازل للضعفاء',
@@ -165,28 +161,28 @@ export class TranslationService {
           {
             title: 'توزيع الزكاة',
             description: 'توزيع الزكاة على الفقراء والمحتاجين.',
-            image: 'gallery/14.jpg',
+            image: 'gallery/13.jpg',
           },
           {
             title: 'المياه الآمنة',
             description: 'توفير المياه الآمنة للمجتمعات، بما في ذلك بناء الآبار.',
-            image: 'gallery/14.jpg',
+            image: 'gallery/9.jpg',
           },
           {
             title: 'القربان',
             description: 'أداء القربان في أيام عيد الأضحى لمساعدة المحتاجين.',
-            image: 'gallery/14.jpg',
+            image: 'gallery/7.jpg',
           },
           {
             title: 'صيام رمضان',
             description: 'الدعم خلال شهر رمضان المبارك (سلة غذائية / إفطار).',
-            image: 'gallery/14.jpg',
+            image: 'gallery/6.jpg',
           },
-          { title: 'الأضحية', description: 'برنامج الأضحية للمجتمع.', image: 'gallery/14.jpg' },
+
           {
             title: 'المدخلات الزراعية',
             description: 'توفير المدخلات الزراعية للمزارعين مثل الذرة والفاصوليا وشتلات الكاكاو.',
-            image: 'gallery/14.jpg',
+            image: 'gallery/23.jpg',
           },
           {
             title: 'العودة إلى المدرسة',
