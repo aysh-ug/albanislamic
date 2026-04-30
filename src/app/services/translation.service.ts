@@ -33,30 +33,36 @@ export class TranslationService {
           {
             title: 'Education Support',
             description: 'Support vulnerable children with education.',
+            image: 'gallery/14.jpg'
           },
-          { title: 'Mosques & Faith', description: 'Build mosques and strengthen Islamic faith.' },
+          { title: 'Mosques & Faith', description: 'Build mosques and strengthen Islamic faith.', image: 'gallery/14.jpg' },
           {
             title: 'Homes for Vulnerable',
             description: 'Construct homes for single mothers and widows.',
+            image: 'gallery/14.jpg'
           },
-          { title: 'Zakat Distribution', description: 'Distribute zakat to the poor and needy.' },
+          { title: 'Zakat Distribution', description: 'Distribute zakat to the poor and needy.', image: 'gallery/14.jpg' },
           {
             title: 'Safe Water',
             description: 'Provide safe water for communities, including borehole construction.',
+            image: 'gallery/14.jpg'
           },
           {
             title: 'Qurban',
             description: 'Perform Qurban on Eid Adhuhiya days to help those in need.',
+            image: 'gallery/14.jpg'
           },
           {
             title: 'Ramadhan Fasting',
             description: 'Support during the holy month of Ramadhan (Food basket/Ifutar program).',
+            image: 'gallery/14.jpg'
           },
-          { title: 'Al-adhuhiya', description: 'Al-adhuhiya program for the community.' },
+          { title: 'Al-adhuhiya', description: 'Al-adhuhiya program for the community.', image: 'gallery/14.jpg' },
           {
             title: 'Agriculture Inputs',
             description:
               'Provide agriculture inputs to farmers like maize, beans, cocoa seedlings.',
+            image: 'gallery/14.jpg'
           },
         ],
         impactTitle: 'Our Impact',
@@ -105,27 +111,31 @@ export class TranslationService {
         visionText: 'خلق عالم يحصل فيه كل فرد على الاحتياجات الأساسية وفرص النمو والتطور.',
         whatWeDoTitle: 'ماذا نفعل',
         activities: [
-          { title: 'دعم التعليم', description: 'دعم الأطفال الضعفاء في التعليم.' },
-          { title: 'المساجد والإيمان', description: 'بناء المساجد وتعزيز العقيدة الإسلامية.' },
-          { title: 'منازل للضعفاء', description: 'بناء منازل للأمهات العازبات والأرامل.' },
-          { title: 'توزيع الزكاة', description: 'توزيع الزكاة على الفقراء والمحتاجين.' },
+          { title: 'دعم التعليم', description: 'دعم الأطفال الضعفاء في التعليم.', image: 'gallery/14.jpg' },
+          { title: 'المساجد والإيمان', description: 'بناء المساجد وتعزيز العقيدة الإسلامية.', image: 'gallery/14.jpg' },
+          { title: 'منازل للضعفاء', description: 'بناء منازل للأمهات العازبات والأرامل.', image: 'gallery/14.jpg' },
+          { title: 'توزيع الزكاة', description: 'توزيع الزكاة على الفقراء والمحتاجين.', image: 'gallery/14.jpg' },
           {
             title: 'المياه الآمنة',
             description: 'توفير المياه الآمنة للمجتمعات، بما في ذلك بناء الآبار.',
+            image: 'gallery/14.jpg'
           },
-          { title: 'القربان', description: 'أداء القربان في أيام عيد الأضحى لمساعدة المحتاجين.' },
+          { title: 'القربان', description: 'أداء القربان في أيام عيد الأضحى لمساعدة المحتاجين.', image: 'gallery/14.jpg' },
           {
             title: 'صيام رمضان',
             description: 'الدعم خلال شهر رمضان المبارك (سلة غذائية / إفطار).',
+            image: 'gallery/14.jpg'
           },
-          { title: 'الأضحية', description: 'برنامج الأضحية للمجتمع.' },
+          { title: 'الأضحية', description: 'برنامج الأضحية للمجتمع.', image: 'gallery/14.jpg' },
           {
             title: 'المدخلات الزراعية',
             description: 'توفير المدخلات الزراعية للمزارعين مثل الذرة والفاصوليا وشتلات الكاكاو.',
+            image: 'gallery/14.jpg'
           },
           {
             title: 'العودة إلى المدرسة',
             description: 'توفير الحقائب المدرسية والمستلزمات الدراسية للطلاب.',
+            image: 'gallery/14.jpg'
           },
         ],
         impactTitle: 'تأثيرنا',
