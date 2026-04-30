@@ -119,6 +119,7 @@ export class TranslationService {
         phone: '+256759860473 / +256782553697',
         address:
           'P.O BOX 1376, ST. Mulumba Zone, Kyebando Parish, Mayuge Town Council, Mayuge District, Uganda',
+        location: "St. Mulumba Village, Mwanja Road, Mayuge Town Council (Near Betty's Guest House)",
         copyright: '© 2026 Alban Islamic Primary School. All rights reserved.',
       },
     },
@@ -213,6 +214,7 @@ export class TranslationService {
         phone: '+256759860473 / +256782553697',
         address:
           'صندوق بريد 1376، منطقة سانت مولومبا، أبرشية كيباندو، مجلس مدينة مايوجي، مقاطعة مايوجي، أوغندا',
+        location: 'قرية سانت مولومبا، طريق موانجا، مجلس مدينة مايوجي (بالقرب من بيت ضيافة بيتي)',
         copyright: '© 2026 مدرسة ألبان الإسلامية الابتدائية. جميع الحقوق محفوظة.',
       },
     },
