@@ -28,11 +28,19 @@ export class TranslationService {
         visionTitle: 'Our Vision',
         visionText:
           'To create a world where every individual has access to basic needs and opportunities for growth and development.',
+        coreValuesTitle: 'Our Core Values',
+        coreValues: [
+          'Transparency',
+          'Accountability',
+          'Integrity',
+          'Humanity',
+          'Service above self',
+        ],
         whatWeDoTitle: 'What We Do',
         activities: [
           {
             title: 'Education Support',
-            description: 'Support vulnerable children with education.',
+            description: 'Build schools and support vulnerable children with education.',
             image: 'gallery/14.jpg',
           },
           {
@@ -43,7 +51,7 @@ export class TranslationService {
           {
             title: 'Homes for Vulnerable',
             description: 'Construct homes for single mothers and widows.',
-            image: 'gallery/14.jpg',
+            image: 'gallery/24.jpg',
           },
           {
             title: 'Zakat Distribution',
@@ -53,7 +61,7 @@ export class TranslationService {
           {
             title: 'Safe Water',
             description: 'Provide safe water for communities, including borehole construction.',
-            image: 'gallery/18.jpg',
+            image: 'gallery/9.jpg',
           },
           {
             title: 'Qurban',
@@ -74,7 +82,7 @@ export class TranslationService {
             title: 'Agriculture Inputs',
             description:
               'Provide agriculture inputs to farmers like maize, beans, cocoa seedlings.',
-            image: 'gallery/5.jpg',
+            image: 'gallery/23.jpg',
           },
         ],
         impactTitle: 'Our Impact',
@@ -129,6 +137,8 @@ export class TranslationService {
         missionText: 'تقديم المساعدة الإنسانية وتعزيز تنمية المجتمع وفقاً للمبادئ الإسلامية.',
         visionTitle: 'رؤيتنا',
         visionText: 'خلق عالم يحصل فيه كل فرد على الاحتياجات الأساسية وفرص النمو والتطور.',
+        coreValuesTitle: 'قيمنا الأساسية',
+        coreValues: ['الشفافية', 'المساءلة', 'النزاهة', 'الإنسانية', 'الخدمة فوق الذات'],
         whatWeDoTitle: 'ماذا نفعل',
         activities: [
           {

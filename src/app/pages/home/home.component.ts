@@ -51,6 +51,26 @@ import { TranslationService } from '../../services/translation.service';
       </div>
     </div>
 
+    <!-- Core Values -->
+    <div class="py-16 bg-blue-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-extrabold text-primary">{{ ts.t.home.coreValuesTitle }}</h2>
+          <div class="w-24 h-1 bg-primary mx-auto mt-6 rounded-full"></div>
+        </div>
+        <div class="flex flex-wrap justify-center gap-6">
+          <div *ngFor="let value of ts.t.home.coreValues" class="bg-white px-8 py-6 rounded-2xl shadow-sm border-t-4 border-primary hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex items-center gap-5 flex-grow sm:flex-grow-0 sm:min-w-[280px]">
+            <div class="w-12 h-12 bg-blue-50 text-primary rounded-xl flex items-center justify-center shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+              </svg>
+            </div>
+            <span class="text-xl font-bold text-gray-800">{{ value }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- What We Do -->
     <div class="py-20 bg-gray-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
