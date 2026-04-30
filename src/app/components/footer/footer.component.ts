@@ -45,7 +45,7 @@ import { TranslationService } from '../../services/translation.service';
           <div class="lg:col-span-1 h-64 md:h-full min-h-[250px] rounded-xl overflow-hidden shadow-lg border border-gray-700/50 relative">
             <div class="absolute inset-0 bg-gray-800 animate-pulse" id="map-skeleton"></div>
             <iframe 
-              src="https://maps.google.com/maps?q=0.459242,33.474140+(Alban+Islamic+School)&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+              src="https://maps.google.com/maps?q=0.459242,33.474140&t=&z=16&ie=UTF8&iwloc=&output=embed" 
               width="100%" 
               height="100%" 
               style="border:0;" 
