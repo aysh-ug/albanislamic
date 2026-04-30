@@ -69,13 +69,14 @@ export class TranslationService {
           'Alban Islamic Primary School Limited is a nonprofit organization established and fully registered on 15th May, 2017 by the registrar of companies (Reg No: 80020000246307), and fully registered with the Ministry of Education and Sports. The objective of this organization is to improve on the social economic and education areas in the communities, catering for orphans and needy children. Our organization is also involved in providing relief and development services in ST. Mulumba Zone, Kyebando Parish, Mayuge Town Council, Mayuge District, Eastern Uganda.',
         managementTitle: 'Management Team',
         staff: [
-          { name: 'Mutagobwa Birali iddi', role: 'Executive Director' },
+          { name: 'Mutagobwa Birali iddi', role: 'Executive Director', image: 'muta.jpg' },
           {
             name: 'Ibrahim siraj Luwemba. Kukulakweta',
             role: 'Finance and Administration Officer',
+            image: 'ibra.jpg'
           },
-          { name: 'Aisha Nangobi', role: 'In charge Education and social warfare' },
-          { name: 'Kisita musa', role: 'Programs Coordinator, Relief and Community Development' },
+          { name: 'Aisha Nangobi', role: 'In charge Education and social warfare', image: 'aisha.jpg' },
+          { name: 'Kisita musa', role: 'Programs Coordinator, Relief and Community Development', image: 'musa.jpg' },
         ],
       },
       footer: {
@@ -136,10 +137,10 @@ export class TranslationService {
           'مدرسة ألبان الإسلامية الابتدائية المحدودة هي منظمة غير ربحية تأسست ومسجلة بالكامل في 15 مايو 2017 من قبل مسجل الشركات (رقم التسجيل: 80020000246307)، ومسجلة بالكامل لدى وزارة التعليم والرياضة. الهدف من هذه المنظمة هو تحسين المجالات الاجتماعية والاقتصادية والتعليمية في المجتمعات، وتلبية احتياجات الأيتام والأطفال المحتاجين. تشارك منظمتنا أيضاً في تقديم خدمات الإغاثة والتنمية في منطقة سانت مولومبا، أبرشية كيباندو، مجلس مدينة مايوجي، مقاطعة مايوجي، شرق أوغندا.',
         managementTitle: 'فريق الإدارة',
         staff: [
-          { name: 'Mutagobwa Birali iddi', role: 'المدير التنفيذي' },
-          { name: 'Ibrahim siraj Luwemba. Kukulakweta', role: 'مسؤول المالية والإدارة' },
-          { name: 'Aisha Nangobi', role: 'مسؤولة التعليم والرعاية الاجتماعية' },
-          { name: 'Kisita musa', role: 'منسق البرامج، الإغاثة وتنمية المجتمع' },
+          { name: 'Mutagobwa Birali iddi', role: 'المدير التنفيذي', image: 'muta.jpg' },
+          { name: 'Ibrahim siraj Luwemba. Kukulakweta', role: 'مسؤول المالية والإدارة', image: 'ibra.jpg' },
+          { name: 'Aisha Nangobi', role: 'مسؤولة التعليم والرعاية الاجتماعية', image: 'aisha.jpg' },
+          { name: 'Kisita musa', role: 'منسق البرامج، الإغاثة وتنمية المجتمع', image: 'musa.jpg' },
         ],
       },
       footer: {
