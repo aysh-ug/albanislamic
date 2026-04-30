@@ -9,42 +9,91 @@ import { TranslationService } from '../../services/translation.service';
   imports: [CommonModule, RouterModule],
   template: `
     <!-- Hero Section -->
-    <div class="relative bg-primary text-white overflow-hidden bg-[url('/1.jpg')] bg-cover bg-center">
-      <div class="absolute inset-0 bg-gradient-to-r rtl:bg-gradient-to-l from-primary/80 to-transparent"></div>
+    <div
+      class="relative bg-primary text-white overflow-hidden bg-[url('/1.jpg')] bg-cover bg-center"
+    >
+      <div
+        class="absolute inset-0 bg-gradient-to-r rtl:bg-gradient-to-l from-primary/80 to-transparent"
+      ></div>
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-40 relative z-10">
         <div class="max-w-3xl">
-          <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 text-white" [innerHTML]="ts.t.home.heroTitle"></h1>
-          <p class="text-xl md:text-2xl font-medium mb-10 text-white opacity-90">{{ ts.t.home.heroSubtitle }}</p>
-          <a routerLink="/about-us" class="inline-block bg-white text-primary font-bold px-8 py-4 rounded-full shadow-lg hover:bg-gray-100 transition-colors text-lg">
+          <h1
+            class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 text-white"
+            [innerHTML]="ts.t.home.heroTitle"
+          ></h1>
+          <p class="text-xl md:text-2xl font-medium mb-10 text-white opacity-90">
+            {{ ts.t.home.heroSubtitle }}
+          </p>
+          <a
+            routerLink="/about-us"
+            class="inline-block bg-white text-primary font-bold px-8 py-4 rounded-full shadow-lg hover:bg-gray-100 transition-colors text-lg"
+          >
             {{ ts.t.nav.aboutUs }}
           </a>
         </div>
       </div>
       <!-- Decorative element -->
-      <div class="absolute bottom-0 w-full h-16 bg-white z-10" style="clip-path: polygon(0 100%, 100% 100%, 100% 0);"></div>
+      <div
+        class="absolute bottom-0 w-full h-16 bg-white z-10"
+        style="clip-path: polygon(0 100%, 100% 100%, 100% 0);"
+      ></div>
     </div>
 
     <!-- Mission & Vision -->
     <div class="py-20 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div class="bg-blue-50 rounded-2xl p-10 border-t-4 border-primary shadow-sm hover:shadow-md transition-shadow">
-            <div class="w-14 h-14 bg-primary rounded-xl flex items-center justify-center text-white mb-6">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3 3v1.5M3 21v-6m0 0 2.77-.693a9 9 0 0 1 6.208.682l.108.054a9 9 0 0 0 6.086.71l3.114-.732a48.524 48.524 0 0 1-.005-10.499l-3.11.732a9 9 0 0 1-6.085-.711l-.108-.054a9 9 0 0 0-6.208-.682L3 4.5M3 15V4.5" />
+          <div
+            class="bg-blue-50 rounded-2xl p-10 border-t-4 border-primary shadow-sm hover:shadow-md transition-shadow"
+          >
+            <div
+              class="w-14 h-14 bg-primary rounded-xl flex items-center justify-center text-white mb-6"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-8 h-8"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3 3v1.5M3 21v-6m0 0 2.77-.693a9 9 0 0 1 6.208.682l.108.054a9 9 0 0 0 6.086.71l3.114-.732a48.524 48.524 0 0 1-.005-10.499l-3.11.732a9 9 0 0 1-6.085-.711l-.108-.054a9 9 0 0 0-6.208-.682L3 4.5M3 15V4.5"
+                />
               </svg>
             </div>
             <h2 class="text-3xl font-bold text-primary mb-4">{{ ts.t.home.missionTitle }}</h2>
             <p class="text-gray-700 text-lg leading-relaxed">{{ ts.t.home.missionText }}</p>
           </div>
-          <div class="bg-blue-50 rounded-2xl p-10 border-t-4 border-primary shadow-sm hover:shadow-md transition-shadow">
-            <div class="w-14 h-14 bg-primary rounded-xl flex items-center justify-center text-white mb-6">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+          <div
+            class="bg-blue-50 rounded-2xl p-10 border-t-4 border-primary shadow-sm hover:shadow-md transition-shadow"
+          >
+            <div
+              class="w-14 h-14 bg-primary rounded-xl flex items-center justify-center text-white mb-6"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-8 h-8"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                />
               </svg>
             </div>
-            <h2 class="text-3xl font-bold text-primary mb-4">{{ ts.t.home.visionTitle }}</h2>
+            <h2 class="text-3xl font-bold text-primary  mb-4">{{ ts.t.home.visionTitle }}</h2>
             <p class="text-gray-700 text-lg leading-relaxed">{{ ts.t.home.visionText }}</p>
           </div>
         </div>
@@ -59,9 +108,21 @@ import { TranslationService } from '../../services/translation.service';
           <div class="w-24 h-1 bg-primary mx-auto mt-6 rounded-full"></div>
         </div>
         <div class="flex flex-wrap justify-center gap-6">
-          <div *ngFor="let value of ts.t.home.coreValues" class="bg-white px-8 py-6 rounded-2xl shadow-sm border-t-4 border-primary hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex items-center gap-5 flex-grow sm:flex-grow-0 sm:min-w-[280px]">
-            <div class="w-12 h-12 bg-blue-50 text-primary rounded-xl flex items-center justify-center shrink-0">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6">
+          <div
+            *ngFor="let value of ts.t.home.coreValues"
+            class="bg-white px-8 py-6 rounded-2xl shadow-sm border-t-4 border-primary hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex items-center gap-5 flex-grow sm:flex-grow-0 sm:min-w-[280px]"
+          >
+            <div
+              class="w-12 h-12 bg-blue-50 text-primary rounded-xl flex items-center justify-center shrink-0"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
                 <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
               </svg>
             </div>
@@ -78,13 +139,24 @@ import { TranslationService } from '../../services/translation.service';
           <h2 class="text-4xl font-extrabold text-primary">{{ ts.t.home.whatWeDoTitle }}</h2>
           <div class="w-24 h-1 bg-primary mx-auto mt-6 rounded-full"></div>
         </div>
-        
+
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div *ngFor="let activity of ts.t.home.activities" class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+          <div
+            *ngFor="let activity of ts.t.home.activities"
+            class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+          >
             <!-- Activity Image -->
-            <div class="h-48 bg-gray-200 flex items-center justify-center relative overflow-hidden group">
-              <img [src]="activity.image" [alt]="activity.title" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-              <div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-20 transition-opacity pointer-events-none"></div>
+            <div
+              class="h-48 bg-gray-200 flex items-center justify-center relative overflow-hidden group"
+            >
+              <img
+                [src]="activity.image"
+                [alt]="activity.title"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-20 transition-opacity pointer-events-none"
+              ></div>
             </div>
             <div class="p-6">
               <h3 class="text-xl font-bold text-gray-900 mb-2">{{ activity.title }}</h3>
@@ -107,12 +179,15 @@ import { TranslationService } from '../../services/translation.service';
     <div class="py-20 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 class="text-3xl font-extrabold text-primary mb-8">{{ ts.t.home.galleryTitle }}</h2>
-        <a routerLink="/gallery" class="inline-block bg-primary text-white font-bold px-8 py-4 rounded-full shadow-lg hover:bg-blue-600 transition-colors text-lg">
+        <a
+          routerLink="/gallery"
+          class="inline-block bg-primary text-white font-bold px-8 py-4 rounded-full shadow-lg hover:bg-blue-600 transition-colors text-lg"
+        >
           View Our Photo Gallery
         </a>
       </div>
     </div>
-  `
+  `,
 })
 export class HomeComponent {
   ts = inject(TranslationService);
