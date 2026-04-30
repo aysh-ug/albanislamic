@@ -9,8 +9,8 @@ import { TranslationService } from '../../services/translation.service';
   template: `
     <footer class="bg-gray-900 text-white pt-12 pb-8 border-t-4 border-primary">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="lg:col-span-1">
             <div class="flex items-center gap-2 mb-4">
               <img src="logo.png" alt="Alban Islamic Logo" class="h-10 w-auto object-contain" />
               <span class="text-2xl font-bold">Alban Islamic</span>
@@ -40,6 +40,21 @@ import { TranslationService } from '../../services/translation.service';
                 <span class="text-gray-300">{{ ts.t.footer.phone }}</span>
               </li>
             </ul>
+          </div>
+          
+          <div class="lg:col-span-1 h-64 md:h-full min-h-[250px] rounded-xl overflow-hidden shadow-lg border border-gray-700/50 relative">
+            <div class="absolute inset-0 bg-gray-800 animate-pulse" id="map-skeleton"></div>
+            <iframe 
+              src="https://maps.google.com/maps?q=Mayuge%20Town%20Council,%20Uganda&t=&z=14&ie=UTF8&iwloc=&output=embed" 
+              width="100%" 
+              height="100%" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+              class="relative z-10 w-full h-full"
+              onload="document.getElementById('map-skeleton').style.display='none';"
+            ></iframe>
           </div>
         </div>
         
