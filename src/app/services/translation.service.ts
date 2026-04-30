@@ -52,7 +52,7 @@ export class TranslationService {
             image: 'gallery/4.jpg',
           },
           {
-            title: 'Homes for Vulnerable',
+            title: 'Homes for the Vulnerable widows and Single mothers',
             description: 'Construct homes for single mothers and widows.',
             image: 'gallery/24.jpg',
           },
@@ -154,7 +154,7 @@ export class TranslationService {
             image: 'gallery/4.jpg',
           },
           {
-            title: 'منازل للضعفاء',
+            title: 'منازل للأرامل والأمهات العازبات الضعفاء',
             description: 'بناء منازل للأمهات العازبات والأرامل.',
             image: 'gallery/24.jpg',
           },
