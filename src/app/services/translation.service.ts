@@ -17,6 +17,9 @@ export class TranslationService {
         aboutUs: 'About Us',
         gallery: 'Gallery',
         language: 'Language',
+        donate: 'Donate',
+        donateTitle: 'Support Our Cause',
+        donateSubtitle: 'Your contribution helps us make a difference',
       },
       home: {
         heroTitle: 'Welcome to <br /> <span class="text-white">ALBAN ISLAMIC SCHOOL</span>',
@@ -129,6 +132,9 @@ export class TranslationService {
         aboutUs: 'من نحن',
         gallery: 'معرض الصور',
         language: 'اللغة',
+        donate: 'تبرع',
+        donateTitle: 'ادعم قضيتنا',
+        donateSubtitle: 'مساهمتك تساعدنا في إحداث فرق',
       },
       home: {
         heroTitle: 'مرحباً بكم في <br /> <span class="text-white">مدرسة ألبان الإسلامية</span>',
