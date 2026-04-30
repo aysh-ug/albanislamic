@@ -156,7 +156,7 @@ export class TranslationService {
           {
             title: 'منازل للضعفاء',
             description: 'بناء منازل للأمهات العازبات والأرامل.',
-            image: 'gallery/14.jpg',
+            image: 'gallery/24.jpg',
           },
           {
             title: 'توزيع الزكاة',
@@ -184,11 +184,7 @@ export class TranslationService {
             description: 'توفير المدخلات الزراعية للمزارعين مثل الذرة والفاصوليا وشتلات الكاكاو.',
             image: 'gallery/23.jpg',
           },
-          {
-            title: 'العودة إلى المدرسة',
-            description: 'توفير الحقائب المدرسية والمستلزمات الدراسية للطلاب.',
-            image: 'gallery/14.jpg',
-          },
+
         ],
         impactTitle: 'تأثيرنا',
         impactText:
