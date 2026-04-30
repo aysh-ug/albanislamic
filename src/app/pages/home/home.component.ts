@@ -86,100 +86,17 @@ import { TranslationService } from '../../services/translation.service';
       </div>
     </div>
 
-    <!-- Gallery Section -->
+    <!-- Call to Action instead of Gallery -->
     <div class="py-20 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl font-extrabold text-primary">{{ ts.t.home.galleryTitle }}</h2>
-          <div class="w-24 h-1 bg-primary mx-auto mt-6 rounded-full"></div>
-        </div>
-        
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          <div *ngFor="let img of galleryImages; let i = index" 
-               (click)="openLightbox(i)"
-               class="aspect-square bg-gray-100 rounded-lg flex items-center justify-center hover:bg-gray-200 transition-colors cursor-pointer border border-gray-200 overflow-hidden relative group">
-             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors z-10 flex items-center justify-center">
-               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity drop-shadow-md">
-                 <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" />
-               </svg>
-             </div>
-             <!-- Placeholder for gallery image -->
-             <img [src]="'https://placehold.co/600x600/f3f4f6/a1a1aa?text=Photo+' + img" alt="Gallery photo" class="w-full h-full object-cover">
-          </div>
-        </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-extrabold text-primary mb-8">{{ ts.t.home.galleryTitle }}</h2>
+        <a routerLink="/gallery" class="inline-block bg-primary text-white font-bold px-8 py-4 rounded-full shadow-lg hover:bg-blue-600 transition-colors text-lg">
+          View Our Photo Gallery
+        </a>
       </div>
-    </div>
-
-    <!-- Lightbox Modal -->
-    <div *ngIf="isLightboxOpen" class="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center backdrop-blur-sm" (click)="closeLightbox()">
-      
-      <!-- Close Button -->
-      <button (click)="closeLightbox()" class="absolute top-6 right-6 text-white hover:text-gray-300 p-2 z-50">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-8 h-8">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </button>
-
-      <!-- Previous Button -->
-      <button (click)="prevImage($event)" class="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 text-white hover:text-primary bg-black/50 hover:bg-black/80 rounded-full p-3 transition-all z-50">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-8 h-8 rtl:rotate-180">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-        </svg>
-      </button>
-
-      <!-- Main Image -->
-      <div class="relative max-w-5xl max-h-[80vh] w-full px-4" (click)="$event.stopPropagation()">
-         <img [src]="'https://placehold.co/1200x800/f3f4f6/a1a1aa?text=Photo+' + galleryImages[selectedImageIndex]" 
-              alt="Expanded gallery photo" 
-              class="w-full h-full object-contain mx-auto rounded-md shadow-2xl">
-         <div class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/70 text-white px-4 py-1 rounded-full text-sm">
-           {{ selectedImageIndex + 1 }} / {{ galleryImages.length }}
-         </div>
-      </div>
-
-      <!-- Next Button -->
-      <button (click)="nextImage($event)" class="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 text-white hover:text-primary bg-black/50 hover:bg-black/80 rounded-full p-3 transition-all z-50">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-8 h-8 rtl:rotate-180">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-        </svg>
-      </button>
-
     </div>
   `
 })
 export class HomeComponent {
   ts = inject(TranslationService);
-  
-  galleryImages = [1, 2, 3, 4, 5, 6, 7, 8];
-  isLightboxOpen = false;
-  selectedImageIndex = 0;
-
-  openLightbox(index: number) {
-    this.selectedImageIndex = index;
-    this.isLightboxOpen = true;
-    document.body.style.overflow = 'hidden'; // Prevent scrolling when open
-  }
-
-  closeLightbox() {
-    this.isLightboxOpen = false;
-    document.body.style.overflow = 'auto';
-  }
-
-  prevImage(event: Event) {
-    event.stopPropagation();
-    if (this.selectedImageIndex > 0) {
-      this.selectedImageIndex--;
-    } else {
-      this.selectedImageIndex = this.galleryImages.length - 1; // Wrap around
-    }
-  }
-
-  nextImage(event: Event) {
-    event.stopPropagation();
-    if (this.selectedImageIndex < this.galleryImages.length - 1) {
-      this.selectedImageIndex++;
-    } else {
-      this.selectedImageIndex = 0; // Wrap around
-    }
-  }
 }

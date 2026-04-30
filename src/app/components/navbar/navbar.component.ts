@@ -25,6 +25,9 @@ import { TranslationService } from '../../services/translation.service';
             <a routerLink="/about-us" routerLinkActive="text-primary border-b-2 border-primary" class="text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium transition-colors">
               {{ ts.t.nav.aboutUs }}
             </a>
+            <a routerLink="/gallery" routerLinkActive="text-primary border-b-2 border-primary" class="text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium transition-colors">
+              {{ ts.t.nav.gallery }}
+            </a>
             
             <button (click)="ts.toggleLanguage()" class="ml-4 rtl:mr-4 rtl:ml-0 inline-flex items-center gap-2 px-4 py-2 border border-primary text-primary rounded-full hover:bg-primary hover:text-white transition-colors text-sm font-medium">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
@@ -57,6 +60,9 @@ import { TranslationService } from '../../services/translation.service';
           </a>
           <a routerLink="/about-us" routerLinkActive="bg-gray-100 text-primary" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50" (click)="isMenuOpen = false">
             {{ ts.t.nav.aboutUs }}
+          </a>
+          <a routerLink="/gallery" routerLinkActive="bg-gray-100 text-primary" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50" (click)="isMenuOpen = false">
+            {{ ts.t.nav.gallery }}
           </a>
         </div>
       </div>

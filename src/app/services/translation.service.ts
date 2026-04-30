@@ -15,6 +15,7 @@ export class TranslationService {
       nav: {
         home: 'Home',
         aboutUs: 'About Us',
+        gallery: 'Gallery',
         language: 'Language',
       },
       home: {
@@ -92,6 +93,7 @@ export class TranslationService {
       nav: {
         home: 'الرئيسية',
         aboutUs: 'من نحن',
+        gallery: 'معرض الصور',
         language: 'اللغة',
       },
       home: {
